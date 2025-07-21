@@ -1,34 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="w-full xl:w-8/10 h-screen flex flex-col">
+        <Nav />
+        <main className="w-full flex-grow overflow-y-auto flex flex-col justify-start items-center">
+          <Routes>
+          </Routes>
+        </main>
+        <footer className="w-full min-h-15 flex justify-center items-center bg-black text-white">
+          K-digital 2025 2기
+        </footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card bg-amber-400">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </BrowserRouter>
   )
 }
 
