@@ -1,6 +1,10 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Nav from './components/Nav.jsx'
+
+import Nav from './components/Nav'
+import Home from './components/Home'
+import Login from './components/Login'
+import Subway from './components/Subway'
 
 function App() {
   return (
@@ -9,6 +13,9 @@ function App() {
         <Nav />
         <main className="w-full flex-grow overflow-y-auto flex flex-col justify-start items-center">
           <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/login' element={<Login />}/>
+            <Route path='/subway' element={<Subway />}/>
           </Routes>
         </main>
         <footer className="w-full min-h-15 flex justify-center items-center bg-black text-white">
