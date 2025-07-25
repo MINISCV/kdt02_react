@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="w-full flex-grow flex flex-col justify-center items-center">
-      {logIn ? "로그아웃하세" : <Login />}
+      {logIn ? <div>{localStorage.getItem('email')}ㅎㅇ</div> : <Login />}
     </div>
   )
 }
