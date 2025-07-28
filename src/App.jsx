@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Subway from './components/Subway'
 import Rest from './components/Rest'
+import TodoList from './components/TodoList'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/login' element={<Login />}/>
             <Route path='/subway' element={<Subway />}/>
             <Route path='/rest' element={<Rest />}/>
+            <Route path='/todo' element={<TodoList />}/>
           </Routes>
         </main>
         <footer className="w-full min-h-15 flex justify-center items-center bg-black text-white">

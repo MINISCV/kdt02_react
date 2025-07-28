@@ -21,7 +21,7 @@ export default function Rest() {
             "title": `${titleRef.current.value}`,
             "author": `${authorRef.current.value}`
         }
-        const { data } = await axios.post(url, postData);
+        await axios.post(url, postData);
         getFetchData();
     }
 

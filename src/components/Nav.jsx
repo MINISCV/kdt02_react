@@ -11,7 +11,7 @@ export default function Nav() {
         setLogIn(false);
         localStorage.removeItem('email');
     }
-    
+
     return (
         <header className="w-full min-h-20 flex justify-between items-center bg-emerald-600 px-10">
             <div className="flex text-xl font-bold">
@@ -33,10 +33,15 @@ export default function Nav() {
                         Rest
                     </li>
                 </Link>}
+                {logIn && <Link to='/todo'>
+                    <li className='text-white text-xl font-bold p-2 rounded-xl hover:bg-emerald-700'>
+                        TodoList
+                    </li>
+                </Link>}
             </ul>
             <Link to='/login'>
                 <div className='text-white text-xl font-bold border p-2 rounded-xl hover:bg-emerald-700'>
-                    { logIn ? <span onClick={handleLogOut}>로그아웃</span> : "로그인" }
+                    {logIn ? <span onClick={handleLogOut}>로그아웃</span> : "로그인"}
                 </div>
             </Link>
         </header>
