@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Login from './components/Login'
 import Subway from './components/Subway'
+import Rest from './components/Rest'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/subway' element={<Subway />}/>
+            <Route path='/rest' element={<Rest />}/>
           </Routes>
         </main>
         <footer className="w-full min-h-15 flex justify-center items-center bg-black text-white">
